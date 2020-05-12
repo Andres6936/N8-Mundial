@@ -61,7 +61,7 @@ public class PanelJugadores extends JPanel implements ActionListener
     /**
      * Es el combo con los jugadores del equipo
      */
-    private JComboBox comboJugadores;
+    private JComboBox<String> comboJugadores;
 
     /**
      * Etiqueta "Nombre: "
@@ -145,8 +145,8 @@ public class PanelJugadores extends JPanel implements ActionListener
         c = new GridBagConstraints( 1, 0, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 3, 5, 3, 5 ), 0, 0 );
         add( etiquetaNombre, c );
 
-        comboJugadores = new JComboBox( );
-        comboJugadores.setEditable( false );
+        comboJugadores = new JComboBox<>();
+        comboJugadores.setEditable(false);
         comboJugadores.addActionListener( this );
         comboJugadores.setActionCommand( CAMBIAR_JUGADOR );
         comboJugadores.setPreferredSize( new Dimension( 230, 20 ) );
@@ -214,11 +214,11 @@ public class PanelJugadores extends JPanel implements ActionListener
     {
         jugador = j;
         etiquetaImagen.setIcon(new ImageIcon(jugador.darImagen()));
-        etiquetaValorEdad.setText(Integer.toString(jugador.darEdad()) + " aáos");
+        etiquetaValorEdad.setText(jugador.darEdad() + " aáos");
         etiquetaValorPosicion.setText(jugador.darPosicion());
-        etiquetaValorAltura.setText( Double.toString( jugador.darAltura( ) ) + " mts" );
-        etiquetaValorPeso.setText( Double.toString( jugador.darPeso( ) ) + " Kgs" );
-        etiquetaValorSalario.setText( principal.formatearValor( jugador.darSalario( ) ) + " millones anuales" );
+        etiquetaValorAltura.setText(jugador.darAltura() + " mts");
+        etiquetaValorPeso.setText(jugador.darPeso() + " Kgs");
+        etiquetaValorSalario.setText(principal.formatearValor(jugador.darSalario()) + " millones anuales");
 
     }
 
@@ -245,15 +245,14 @@ public class PanelJugadores extends JPanel implements ActionListener
      */
     private void cambiarEquipo( Equipo e )
     {
-        comboJugadores.removeAllItems( );
-        ArrayList jugadores = e.darNombresJugadores( );
-        for( int i = 0; i < jugadores.size( ); i++ )
-        {
-            String jugador = ( String )jugadores.get( i );
-            comboJugadores.addItem( jugador );
+        comboJugadores.removeAllItems();
+        ArrayList<String> jugadores = e.darNombresJugadores();
+        for (String jugadore : jugadores) {
+            comboJugadores.addItem(jugadore);
         }
-        if( jugadores.size( ) == 0 ) {
+        if (jugadores.size() == 0) {
             URL resource = getClass().getClassLoader().getResource("data/sinFoto.img");
+            assert resource != null;
             etiquetaImagen.setIcon(new ImageIcon(resource));
             etiquetaValorEdad.setText("");
             etiquetaValorPosicion.setText("");

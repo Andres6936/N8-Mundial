@@ -274,22 +274,13 @@ public class InterfazMundial extends JFrame
             File archivo = fc.getSelectedFile( );
             if( archivo != null )
             {
-                try
-                {
+                try {
                     mundial.modificarInformacionJugadores(archivo);
-                    JOptionPane.showMessageDialog(this, "La informacián de los jugadores fue modificada", "Modificar Informacián Jugadores", JOptionPane.INFORMATION_MESSAGE );
-                }
-                catch( FileNotFoundException e )
-                {
-                    JOptionPane.showMessageDialog(this, "Se presentá un problema leyendo el archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE );
-                }
-                catch( IOException e )
-                {
-                    JOptionPane.showMessageDialog(this, "Se presentá un problema leyendo el archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE );
-                }
-                catch( ArchivoJugadoresException e )
-                {
-                    JOptionPane.showMessageDialog(this, "Se presentá un problema debido al formato del archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog(this, "La informacián de los jugadores fue modificada", "Modificar Informacián Jugadores", JOptionPane.INFORMATION_MESSAGE);
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(this, "Se presentá un problema leyendo el archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                } catch (ArchivoJugadoresException e) {
+                    JOptionPane.showMessageDialog(this, "Se presentá un problema debido al formato del archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         }

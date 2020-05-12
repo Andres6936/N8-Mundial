@@ -31,22 +31,22 @@ public class Equipo implements Serializable
     /**
      * Es el vector con los jugadores del equipo
      */
-    private ArrayList jugadores;
+    private final ArrayList<Jugador> jugadores;
 
     /**
      * Es el nombre del paás que representa el equipo
      */
-    private String pais;
+    private final String pais;
 
     /**
      * Es el nombre del director tácnico del equipo
      */
-    private String director;
+    private final String director;
 
     /**
      * Es la ruta de la imagen con la bandera del equipo
      */
-    private String imagen;
+    private final String imagen;
 
     // -----------------------------------------------------------------
     // Constructores
@@ -61,7 +61,7 @@ public class Equipo implements Serializable
      */
     public Equipo( String paisE, String directorE, String imagenE )
     {
-        jugadores = new ArrayList( );
+        jugadores = new ArrayList<>();
         pais = paisE;
         director = directorE;
         imagen = imagenE;
@@ -85,7 +85,7 @@ public class Equipo implements Serializable
 
         for( int i = 0; i < jugadores.size( ) && !esta; i++ )
         {
-            Jugador j = ( Jugador )jugadores.get( i );
+            Jugador j = jugadores.get(i);
             if( j.darNombre( ).equalsIgnoreCase( nombreJ ) )
             {
                 jugadorBuscado = j;
@@ -140,15 +140,14 @@ public class Equipo implements Serializable
 
     /**
      * Retorna el vector con los nombres de las jugadores del equipo
+     *
      * @return Se retorná el vector con los nombres de los jugadores
      */
-    public ArrayList darNombresJugadores( )
+    public ArrayList<String> darNombresJugadores()
     {
-        ArrayList nombresJugadores = new ArrayList( );
-        for( int i = 0; i < jugadores.size( ); i++ )
-        {
-            Jugador j = ( Jugador )jugadores.get( i );
-            nombresJugadores.add( j.darNombre( ) );
+        ArrayList<String> nombresJugadores = new ArrayList<>();
+        for (Jugador jugadore : jugadores) {
+            nombresJugadores.add(jugadore.darNombre());
         }
         return nombresJugadores;
     }
@@ -157,13 +156,11 @@ public class Equipo implements Serializable
      * Calcula el valor de la námina del equipo
      * @return Se retorná el valor de la námina del equipo
      */
-    public double calcularValorNomina( )
+    public double calcularValorNomina()
     {
         double valorTotal = 0;
-        for( int i = 0; i < jugadores.size( ); i++ )
-        {
-            Jugador j = ( Jugador )jugadores.get( i );
-            valorTotal = valorTotal + j.darSalario( );
+        for (Jugador jugadore : jugadores) {
+            valorTotal = valorTotal + jugadore.darSalario();
         }
         return valorTotal;
     }
@@ -219,12 +216,12 @@ public class Equipo implements Serializable
     {
         for( int i = 0; i < jugadores.size( ); i++ )
         {
-            Jugador j1 = ( Jugador )jugadores.get( i );
+            Jugador j1 = jugadores.get( i );
             for( int j = 0; j < jugadores.size( ); j++ )
             {
                 if( i != j )
                 {
-                    Jugador j2 = ( Jugador )jugadores.get( j );
+                    Jugador j2 = jugadores.get( j );
                     if( j1.darNombre( ).equalsIgnoreCase( j2.darNombre( ) ) )
                     {
                         return true;
