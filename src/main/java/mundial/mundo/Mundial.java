@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -29,7 +30,7 @@ public class Mundial
     /**
      * Nombre del archivo de registro de errores del programa
      */
-    private static final String LOG_FILE = "./data/error.log";
+    private static final String LOG_FILE = "data/error.log";
 
     /**
      * Námero de datos a leer para un equipo
@@ -48,12 +49,12 @@ public class Mundial
     /**
      * La lista de equipos del mundial
      */
-    private ArrayList equipos;
+    private ArrayList<Equipo> equipos = new ArrayList<>();
 
     /**
      * Es el archivo de donde se cargan y salvan los equipos
      */
-    private String archivoMundial;
+    private final String archivoMundial;
 
     // -----------------------------------------------------------------
     // Constructores
@@ -69,29 +70,28 @@ public class Mundial
     public Mundial( String nombreArchivoMundial ) throws PersistenciaException
     {
         archivoMundial = nombreArchivoMundial;
-        File archivo = new File( archivoMundial );
-        if( archivo.exists( ) )
-        {
-            // El archivo existe: se debe recuperar de allá el estado del modelo del mundo
-            try
-            {
-                ObjectInputStream ois = new ObjectInputStream( new FileInputStream( archivo ) );
-                equipos = ( ArrayList )ois.readObject( );
-                ois.close( );
+
+        URL resource = getClass().getClassLoader().getResource(nombreArchivoMundial);
+        if (resource != null) {
+            File archivo = new File(resource.getFile());
+
+            if (archivo.exists()) {
+                // El archivo existe: se debe recuperar de allá el estado del modelo del mundo
+                try {
+                    ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo));
+                    equipos = (ArrayList)ois.readObject();
+                    ois.close();
+                } catch (Exception e) {
+                    // Se atrapan en este bloque todos los tipos de excepcián
+                    registrarError(e);
+                    throw new PersistenciaException("Error fatal: imposible restaurar el estado del programa (" + e.getMessage() + ")");
+                }
             }
-            catch( Exception e )
-            {
-                // Se atrapan en este bloque todos los tipos de excepcián
-                registrarError( e );
-                throw new PersistenciaException( "Error fatal: imposible restaurar el estado del programa (" + e.getMessage( ) + ")" );
-            }
-        }
-        else
-        {
+        } else {
             // El archivo no existe: es la primera vez que se ejecuta el programa
-            equipos = new ArrayList( );
+            equipos = new ArrayList<>();
         }
-        verificarInvariante( );
+        verificarInvariante();
     }
 
     // -----------------------------------------------------------------
@@ -110,7 +110,7 @@ public class Mundial
 
         for( int i = 0; i < equipos.size( ) && !esta; i++ )
         {
-            Equipo e = ( Equipo )equipos.get( i );
+            Equipo e = (Equipo)equipos.get(i);
             if( e.darPais( ).equalsIgnoreCase( nombreEquipo ) )
             {
                 equipoBuscado = e;
@@ -140,15 +140,14 @@ public class Mundial
 
     /**
      * Retorna un vector con los nombres de los equipos
+     *
      * @return Vector con los nombres de los equipos
      */
-    public ArrayList darNombresEquipos( )
+    public ArrayList<String> darNombresEquipos()
     {
-        ArrayList nombresEquipos = new ArrayList( );
-        for( int i = 0; i < equipos.size( ); i++ )
-        {
-            Equipo e = ( Equipo )equipos.get( i );
-            nombresEquipos.add( e.darPais( ) );
+        ArrayList<String> nombresEquipos = new ArrayList<>();
+        for (Equipo e : equipos) {
+            nombresEquipos.add(e.darPais());
         }
         return nombresEquipos;
     }
@@ -271,7 +270,7 @@ public class Mundial
 
     /**
      * Carga un equipo a partir de la informacián contenida en un archivo
-     * @param br Es el lector de archivo del cual se lee la informacián del equipo - El lector de archivo ya está listo para leer
+     * @param info Es el lector de archivo del cual se lee la informacián del equipo - El lector de archivo ya está listo para leer
      * @throws ArchivoJugadoresException Se lanza esta excepcián si el archivo no tiene el formato esperado
      * @throws IOException Si hay errores leyendo la siguiente lánea del archivo
      * @throws ArchivoJugadoresException Si la lánea del archivo no tiene el formato esperado

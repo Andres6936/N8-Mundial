@@ -34,7 +34,7 @@ public class InterfazMundial extends JFrame
     /**
      * La ruta donde deben guardarse los reportes
      */
-    private static final String RUTA_REPORTES = "./data/reportes";
+    private static final String RUTA_REPORTES = "data/reportes";
 
     // -----------------------------------------------------------------
     // Atributos
@@ -112,10 +112,10 @@ public class InterfazMundial extends JFrame
         gbc.gridy = 2;
         add( panelJugadores, gbc );
 
-        ArrayList equipos = mundial.darNombresEquipos( );
+        ArrayList<String> equipos = mundial.darNombresEquipos();
         if( equipos.size( ) > 0 )
         {
-            cambiarEquipoSeleccionado( ( ( String )equipos.get( 0 ) ) );
+            cambiarEquipoSeleccionado(equipos.get(0));
         }
 
         panelBotones = new PanelBotones( this );
@@ -266,7 +266,7 @@ public class InterfazMundial extends JFrame
      */
     public void modificarInformacionJugadores( )
     {
-        JFileChooser fc = new JFileChooser( "./data" );
+        JFileChooser fc = new JFileChooser("data");
         fc.setDialogTitle("Modificar informacián de jugadores" );
         int resultado = fc.showOpenDialog( this );
         if( resultado == JFileChooser.APPROVE_OPTION )
@@ -367,7 +367,7 @@ public class InterfazMundial extends JFrame
 
         try
         {
-            mundial = new Mundial( "./data/mundial.equipos" );
+            mundial = new Mundial("data/mundial.equipos");
         }
         catch( PersistenciaException e )
         {
