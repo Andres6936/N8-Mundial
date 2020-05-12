@@ -10,9 +10,9 @@
  * Autor: Milena Vela - 28-ago-2006
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
-package uniandes.cupi2.mundial.test;
+package mundial.test;
 
-import uniandes.cupi2.mundial.mundo.Jugador;
+import mundial.mundo.Jugador;
 import junit.framework.TestCase;
 
 /**

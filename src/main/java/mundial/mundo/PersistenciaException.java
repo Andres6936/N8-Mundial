@@ -1,4 +1,4 @@
-package uniandes.cupi2.mundial.mundo;
+package mundial.mundo;
 
 /**
  * Esta excepcián se lanza cuando se presenta un error al leer o escribir el archivo con la informacián del estado del modelo del mundo. <br>

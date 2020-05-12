@@ -11,7 +11,7 @@
  * Autor: Daniel Romero - 30-nov-2006
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
-package uniandes.cupi2.mundial.test;
+package mundial.test;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,12 +22,12 @@ import java.util.Date;
 
 import junit.framework.TestCase;
 
-import uniandes.cupi2.mundial.mundo.ArchivoJugadoresException;
-import uniandes.cupi2.mundial.mundo.ElementoExisteException;
-import uniandes.cupi2.mundial.mundo.Equipo;
-import uniandes.cupi2.mundial.mundo.Jugador;
-import uniandes.cupi2.mundial.mundo.Mundial;
-import uniandes.cupi2.mundial.mundo.PersistenciaException;
+import mundial.mundo.ArchivoJugadoresException;
+import mundial.mundo.ElementoExisteException;
+import mundial.mundo.Equipo;
+import mundial.mundo.Jugador;
+import mundial.mundo.Mundial;
+import mundial.mundo.PersistenciaException;
 
 /**
  * Esta es la clase que sirve para verificar la clase Mundial.

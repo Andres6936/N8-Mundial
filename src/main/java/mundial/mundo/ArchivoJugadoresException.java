@@ -1,4 +1,4 @@
-package uniandes.cupi2.mundial.mundo;
+package mundial.mundo;
 
 /**
  * Esta excepcián sirve para indicar que hubo un problema procesando el archivo con la informacián de los jugadores a modificar

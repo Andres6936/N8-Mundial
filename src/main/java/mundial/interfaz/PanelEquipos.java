@@ -1,4 +1,4 @@
-package uniandes.cupi2.mundial.interfaz;
+package mundial.interfaz;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -23,7 +23,7 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
-import uniandes.cupi2.mundial.mundo.Equipo;
+import mundial.mundo.Equipo;
 
 /**
  * Panel en el que se muestran los equipos

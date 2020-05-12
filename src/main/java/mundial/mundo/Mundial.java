@@ -1,4 +1,4 @@
-package uniandes.cupi2.mundial.mundo;
+package mundial.mundo;
 
 import java.io.BufferedReader;
 import java.io.File;

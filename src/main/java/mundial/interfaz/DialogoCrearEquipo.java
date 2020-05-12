@@ -1,4 +1,4 @@
-package uniandes.cupi2.mundial.interfaz;
+package mundial.interfaz;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;

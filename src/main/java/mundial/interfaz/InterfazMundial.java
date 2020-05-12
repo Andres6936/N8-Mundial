@@ -1,4 +1,4 @@
-package uniandes.cupi2.mundial.interfaz;
+package mundial.interfaz;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -15,12 +15,12 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import uniandes.cupi2.mundial.mundo.ArchivoJugadoresException;
-import uniandes.cupi2.mundial.mundo.ElementoExisteException;
-import uniandes.cupi2.mundial.mundo.Equipo;
-import uniandes.cupi2.mundial.mundo.Jugador;
-import uniandes.cupi2.mundial.mundo.Mundial;
-import uniandes.cupi2.mundial.mundo.PersistenciaException;
+import mundial.mundo.ArchivoJugadoresException;
+import mundial.mundo.ElementoExisteException;
+import mundial.mundo.Equipo;
+import mundial.mundo.Jugador;
+import mundial.mundo.Mundial;
+import mundial.mundo.PersistenciaException;
 
 /**
  * Esta es la ventana principal de la aplicacián.

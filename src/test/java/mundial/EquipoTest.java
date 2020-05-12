@@ -11,13 +11,13 @@
  * Autor: Daniel Romero - 30-nov-2006
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
-package uniandes.cupi2.mundial.test;
+package mundial.test;
 
 import java.util.ArrayList;
 
-import uniandes.cupi2.mundial.mundo.ElementoExisteException;
-import uniandes.cupi2.mundial.mundo.Equipo;
-import uniandes.cupi2.mundial.mundo.Jugador;
+import mundial.mundo.ElementoExisteException;
+import mundial.mundo.Equipo;
+import mundial.mundo.Jugador;
 import junit.framework.TestCase;
 
 /**
