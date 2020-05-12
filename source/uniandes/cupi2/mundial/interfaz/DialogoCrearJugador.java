@@ -1,16 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: DialogoCrearJugador.java,v 1.5 2006/12/01 22:29:13 da-romer Exp $
- * Universidad de los Andes (Bogot· - Colombia)
- * Departamento de IngenierÌa de Sistemas y ComputaciÛn 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.BorderLayout;
@@ -21,7 +8,7 @@ import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**
- * Es el di·logo para crear un nuevo jugador
+ * Es el di√°logo para crear un nuevo jugador
  */
 public class DialogoCrearJugador extends JDialog
 {
@@ -48,7 +35,8 @@ public class DialogoCrearJugador extends JDialog
     // -----------------------------------------------------------------
 
     /**
-     * Construye el di·logo *
+     * Construye el di√°logo *
+     *
      * @param ventana Es una referencia a la clase principal de la interfaz
      */
     public DialogoCrearJugador( InterfazMundial ventana )
@@ -66,11 +54,11 @@ public class DialogoCrearJugador extends JDialog
     }
 
     // -----------------------------------------------------------------
-    // MÈtodos
+    // M√°todos
     // -----------------------------------------------------------------
 
     /**
-     * Centra el di·logo en la pantalla
+     * Centra el di√°logo en la pantalla
      */
     private void centrar( )
     {
@@ -109,7 +97,7 @@ public class DialogoCrearJugador extends JDialog
                 if( edad < 0 )
                 {
                     parametersOk = false;
-                    JOptionPane.showMessageDialog( this, "La edad ingresada no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog(this, "La edad ingresada no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                 }
                 else
                 {
@@ -118,7 +106,7 @@ public class DialogoCrearJugador extends JDialog
                     if( posicion.equals( "" ) )
                     {
                         parametersOk = false;
-                        JOptionPane.showMessageDialog( this, "La posiciÛn ingresada no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                        JOptionPane.showMessageDialog(this, "La posici√°n ingresada no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                     }
                     else
                     {
@@ -128,7 +116,7 @@ public class DialogoCrearJugador extends JDialog
                             if( altura < 0 )
                             {
                                 parametersOk = false;
-                                JOptionPane.showMessageDialog( this, "La altura ingresada no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                                JOptionPane.showMessageDialog(this, "La altura ingresada no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                             }
                             else
                             {
@@ -138,7 +126,7 @@ public class DialogoCrearJugador extends JDialog
                                     if( peso < 0 )
                                     {
                                         parametersOk = false;
-                                        JOptionPane.showMessageDialog( this, "El peso ingresado no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                                        JOptionPane.showMessageDialog(this, "El peso ingresado no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                                     }
                                     else
                                     {
@@ -148,7 +136,7 @@ public class DialogoCrearJugador extends JDialog
                                             if( salario < 0 )
                                             {
                                                 parametersOk = false;
-                                                JOptionPane.showMessageDialog( this, "El salario ingresado no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                                                JOptionPane.showMessageDialog(this, "El salario ingresado no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                                             }
                                             else
                                             {
@@ -158,34 +146,34 @@ public class DialogoCrearJugador extends JDialog
                                                     if( imagen.equals( "" ) )
                                                     {
                                                         parametersOk = false;
-                                                        JOptionPane.showMessageDialog( this, "La ruta de la imagen ingresada no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                                                        JOptionPane.showMessageDialog(this, "La ruta de la imagen ingresada no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                                                     }
                                                 }
                                                 catch( NumberFormatException e )
                                                 {
                                                     parametersOk = false;
-                                                    JOptionPane.showMessageDialog( this, "La ruta de la imagen ingresada no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                                                    JOptionPane.showMessageDialog(this, "La ruta de la imagen ingresada no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                                                 }
                                             }
                                         }
                                         catch( NumberFormatException e )
                                         {
                                             parametersOk = false;
-                                            JOptionPane.showMessageDialog( this, "El salario ingresado no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                                            JOptionPane.showMessageDialog(this, "El salario ingresado no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                                         }
                                     }
                                 }
                                 catch( NumberFormatException e )
                                 {
                                     parametersOk = false;
-                                    JOptionPane.showMessageDialog( this, "El peso ingresado no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                                    JOptionPane.showMessageDialog(this, "El peso ingresado no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                                 }
                             }
                         }
                         catch( NumberFormatException e )
                         {
                             parametersOk = false;
-                            JOptionPane.showMessageDialog( this, "La altura ingresada no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                            JOptionPane.showMessageDialog(this, "La altura ingresada no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
                         }
                     }
 
@@ -194,7 +182,7 @@ public class DialogoCrearJugador extends JDialog
             catch( NumberFormatException e )
             {
                 parametersOk = false;
-                JOptionPane.showMessageDialog( this, "La edad ingresada no es un valor v·lido", "error", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog(this, "La edad ingresada no es un valor v√°lido", "error", JOptionPane.ERROR_MESSAGE );
             }
         }
 

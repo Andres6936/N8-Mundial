@@ -1,17 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: Jugador.java,v 1.8 2006/12/01 22:29:13 da-romer Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-
 package uniandes.cupi2.mundial.mundo;
 
 import java.io.Serializable;
@@ -34,7 +20,7 @@ public class Jugador implements Serializable
     // -----------------------------------------------------------------
 
     /**
-     * Indicador de versión para la serialización
+     * Indicador de versiÃ¡n para la serializaciÃ¡n
      */
     private static final long serialVersionUID = 100L;
 
@@ -53,7 +39,7 @@ public class Jugador implements Serializable
     private int edad;
 
     /**
-     * Es la posición en la que juega el jugador
+     * Es la posiciÃ¡n en la que juega el jugador
      */
     private String posicion;
 
@@ -83,13 +69,14 @@ public class Jugador implements Serializable
 
     /**
      * Construye un jugador con los datos suministrados
-     * @param nombreJ El nombre del jugador - nombreJ != null
-     * @param edadJ La edad del jugador - edadJ > 0
-     * @param posicionJ La posición en la que juega el jugador - posicionJ != null
-     * @param alturaJ Es la altura del jugador en metros - alturaJ > 0
-     * @param pesoJ Es el peso del jugador en kilogramos - pesoJ > 0
-     * @param salarioJ Es el salario del jugador - salarioJ > 0
-     * @param imagenJ Es el salario del jugador - imagenJ != null
+     *
+     * @param nombreJ   El nombre del jugador - nombreJ != null
+     * @param edadJ     La edad del jugador - edadJ > 0
+     * @param posicionJ La posiciÃ¡n en la que juega el jugador - posicionJ != null
+     * @param alturaJ   Es la altura del jugador en metros - alturaJ > 0
+     * @param pesoJ     Es el peso del jugador en kilogramos - pesoJ > 0
+     * @param salarioJ  Es el salario del jugador - salarioJ > 0
+     * @param imagenJ   Es el salario del jugador - imagenJ != null
      */
     public Jugador( String nombreJ, int edadJ, String posicionJ, double alturaJ, double pesoJ, double salarioJ, String imagenJ )
     {
@@ -101,16 +88,16 @@ public class Jugador implements Serializable
         salario = salarioJ;
         imagen = imagenJ;
 
-        verificarInvariante( );
+        verificarInvariante();
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // MÃ¡todos
     // -----------------------------------------------------------------
 
     /**
      * Retorna el nombre del jugador
-     * @return Se retornó el nombre del jugador
+     * @return Se retornÃ¡ el nombre del jugador
      */
     public String darNombre( )
     {
@@ -119,7 +106,7 @@ public class Jugador implements Serializable
 
     /**
      * Retorna la edad del jugador
-     * @return Se retornó la edad del jugador
+     * @return Se retornÃ¡ la edad del jugador
      */
     public int darEdad( )
     {
@@ -127,8 +114,8 @@ public class Jugador implements Serializable
     }
 
     /**
-     * Retorna la posición del jugador
-     * @return Se retornó la posición del jugador
+     * Retorna la posiciÃ¡n del jugador
+     * @return Se retornÃ¡ la posiciÃ¡n del jugador
      */
     public String darPosicion( )
     {
@@ -137,7 +124,7 @@ public class Jugador implements Serializable
 
     /**
      * Retorna la altura del jugador
-     * @return Se retornó la altura del jugador
+     * @return Se retornÃ¡ la altura del jugador
      */
     public double darAltura( )
     {
@@ -146,7 +133,7 @@ public class Jugador implements Serializable
 
     /**
      * Retorna el peso del jugador
-     * @return Se retornó el peso del jugador
+     * @return Se retornÃ¡ el peso del jugador
      */
     public double darPeso( )
     {
@@ -155,7 +142,7 @@ public class Jugador implements Serializable
 
     /**
      * Retorna el salario del jugador
-     * @return Se retornó el salario del jugador
+     * @return Se retornÃ¡ el salario del jugador
      */
     public double darSalario( )
     {
@@ -164,7 +151,7 @@ public class Jugador implements Serializable
 
     /**
      * Retorna la ruta de la imagen del jugador
-     * @return Se retornó la ruta de la imagen del jugador
+     * @return Se retornÃ¡ la ruta de la imagen del jugador
      */
     public String darImagen( )
     {
@@ -208,8 +195,8 @@ public class Jugador implements Serializable
     }
 
     /**
-     * Cambia la posición del jugador
-     * @param nPosicion Nueva posición del jugador - nPosicion!=null
+     * Cambia la posiciÃ¡n del jugador
+     * @param nPosicion Nueva posiciÃ¡n del jugador - nPosicion!=null
      */
     public void cambiarPosicion( String nPosicion )
     {
@@ -239,15 +226,15 @@ public class Jugador implements Serializable
      * salario > 0 <br>
      * imagen != null <br>
      */
-    private void verificarInvariante( )
+    private void verificarInvariante()
     {
-        assert nombre != null : "El nombre es inválido";
+        assert nombre != null : "El nombre es invÃ¡lido";
         assert edad > 0 : "La edad deben ser un entero positivo";
-        assert posicion != null : "La posición es inválida";
+        assert posicion != null : "La posiciÃ¡n es invÃ¡lida";
         assert altura > 0 : "La altura debe ser un double positivo";
         assert peso > 0 : "El peso debe ser un double positivo";
         assert salario > 0 : "El salario debe ser un double positivo";
-        assert imagen != null : "La ruta de la imagen es inválida";
+        assert imagen != null : "La ruta de la imagen es invÃ¡lida";
     }
 
 }

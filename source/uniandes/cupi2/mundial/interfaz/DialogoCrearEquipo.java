@@ -1,16 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: DialogoCrearEquipo.java,v 1.5 2006/12/01 22:29:13 da-romer Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.BorderLayout;
@@ -21,7 +8,7 @@ import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**
- * Es el diálogo para crear un nuevo equipo
+ * Es el diÃ¡logo para crear un nuevo equipo
  */
 public class DialogoCrearEquipo extends JDialog
 {
@@ -48,7 +35,8 @@ public class DialogoCrearEquipo extends JDialog
     // -----------------------------------------------------------------
 
     /**
-     * Construye el diálogo
+     * Construye el diÃ¡logo
+     *
      * @param ventana Es una referencia a la clase principal de la interfaz - ventana!=null
      */
     public DialogoCrearEquipo( InterfazMundial ventana )
@@ -68,7 +56,7 @@ public class DialogoCrearEquipo extends JDialog
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // MÃ¡todos
     // -----------------------------------------------------------------
 
     /**

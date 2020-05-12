@@ -1,17 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: InterfazMundial.java,v 1.14 2006/12/01 23:20:25 da-romer Exp $
- * Universidad de los Andes (Bogot· - Colombia)
- * Departamento de IngenierÌa de Sistemas y ComputaciÛn 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.Dimension;
@@ -37,7 +23,7 @@ import uniandes.cupi2.mundial.mundo.Mundial;
 import uniandes.cupi2.mundial.mundo.PersistenciaException;
 
 /**
- * Esta es la ventana principal de la aplicaciÛn.
+ * Esta es la ventana principal de la aplicaci√°n.
  */
 public class InterfazMundial extends JFrame
 {
@@ -60,7 +46,7 @@ public class InterfazMundial extends JFrame
     private Mundial mundial;
 
     /**
-     * Es una referencia al equipo del cual se est·n mostrando los datos
+     * Es una referencia al equipo del cual se est√°n mostrando los datos
      */
     private Equipo equipoSeleccionado;
 
@@ -93,8 +79,9 @@ public class InterfazMundial extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Construye la interfaz de la aplicaciÛn
-     * @param m Es el mundial de f˙tbol que se va a mostrar - m!=null
+     * Construye la interfaz de la aplicaci√°n
+     *
+     * @param m Es el mundial de f√°tbol que se va a mostrar - m!=null
      */
     public InterfazMundial( Mundial m )
     {
@@ -103,13 +90,13 @@ public class InterfazMundial extends JFrame
         mundial = m;
 
         // Construye la forma
-        setTitle( "Mundial de f˙tbol CUPI2" );
-        setLayout( new GridBagLayout( ) );
+        setTitle("Mundial de f√°tbol CUPI2");
+        setLayout(new GridBagLayout( ) );
         setSize( 560, 600 );
         setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE );
         setResizable(false);
 
-        // CreaciÛn de los paneles aquÌ
+        // Creaci√°n de los paneles aqu√°
         panelImagen = new PanelImagen( );
         GridBagConstraints gbc = new GridBagConstraints( );
         gbc.gridx = 0;
@@ -138,7 +125,7 @@ public class InterfazMundial extends JFrame
     }
 
     // -----------------------------------------------------------------
-    // MÈtodos
+    // M√°todos
     // -----------------------------------------------------------------
 
     /**
@@ -179,7 +166,7 @@ public class InterfazMundial extends JFrame
     }
 
     /**
-     * Muestra el di·logo para agregar un nuevo equipoSeleccionado al mundial
+     * Muestra el di√°logo para agregar un nuevo equipoSeleccionado al mundial
      */
     public void mostrarDialogoAgregarEquipo( )
     {
@@ -188,7 +175,7 @@ public class InterfazMundial extends JFrame
     }
 
     /**
-     * Muestra el di·logo para agregar un nuevo jugador al equipoSeleccionado en el panel de jugadores
+     * Muestra el di√°logo para agregar un nuevo jugador al equipoSeleccionado en el panel de jugadores
      */
     public void mostrarDialogoAgregarJugador( )
     {
@@ -199,11 +186,11 @@ public class InterfazMundial extends JFrame
 
     /**
      * Crea un nuevo equipo en el mundial y actualiza el panel con la lista de equipos <br>
-     * <b>pre: <b>No debe haber otro equipo representando al mismo paÌs en el mundial
-     * @param pais Es el paÌs del equipoSeleccionado - pais != null
-     * @param director Es el nombre del director tÈcnico del equipoSeleccionado - director != null
+     * <b>pre: <b>No debe haber otro equipo representando al mismo pa√°s en el mundial
+     * @param pais Es el pa√°s del equipoSeleccionado - pais != null
+     * @param director Es el nombre del director t√°cnico del equipoSeleccionado - director != null
      * @param imagen Es la ruta de la imagen con la bandera del equipoSeleccionado - imagen != null
-     * @return Retorna true si el equipo se pudo agregar. Esto sirve para saber si se debe cerrar el di·logo.
+     * @return Retorna true si el equipo se pudo agregar. Esto sirve para saber si se debe cerrar el di√°logo.
      */
     public boolean crearEquipo( String pais, String director, String imagen )
     {
@@ -227,12 +214,12 @@ public class InterfazMundial extends JFrame
      * <b>pre: <b>No debe haber otro jugador con el mismo nombre en el equipo
      * @param nombre El nombre del jugador - nombre != null
      * @param edad La edad del jugador - edad > 0
-     * @param posicion La posiciÛn en la que juega el jugador - posicion != null
+     * @param posicion La posici√°n en la que juega el jugador - posicion != null
      * @param altura Es la altura del jugador en metros - altura > 0
      * @param peso Es el peso del jugador en kilogramos - peso > 0
      * @param salario Es el salario del jugador - salario > 0
      * @param imagen Es la ruta a la imagen con la foto del jugador - imagen != null
-     * @return Retorna true si el jugador se pudo agregar. Esto sirve para saber si se debe cerrar el di·logo.
+     * @return Retorna true si el jugador se pudo agregar. Esto sirve para saber si se debe cerrar el di√°logo.
      */
     public boolean crearJugador( String nombre, int edad, String posicion, double altura, double peso, double salario, String imagen )
     {
@@ -257,7 +244,7 @@ public class InterfazMundial extends JFrame
     }
 
     /**
-     * Calcula el valor de la nÛmina del equipo seleccionado
+     * Calcula el valor de la n√°mina del equipo seleccionado
      */
     public void calcularValorNomina( )
     {
@@ -265,22 +252,22 @@ public class InterfazMundial extends JFrame
         try
         {
             String archivoReporte = mundial.calcularValorNomina( equipoSeleccionado.darPais( ), RUTA_REPORTES );
-            JOptionPane.showMessageDialog( this, "El reporte se guardÛ en el archivo: " + archivoReporte, "Reporte Guardado", JOptionPane.INFORMATION_MESSAGE );
+            JOptionPane.showMessageDialog(this, "El reporte se guard√° en el archivo: " + archivoReporte, "Reporte Guardado", JOptionPane.INFORMATION_MESSAGE );
         }
         catch( IOException e )
         {
-            JOptionPane.showMessageDialog( this, "Se presentÛ un problema guardando el archivo con el reporte:\n" + e.getMessage( ), "Error", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog(this, "Se present√° un problema guardando el archivo con el reporte:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE );
         }
 
     }
 
     /**
-     * Este mÈtodo se encarga de modificar la informaciÛn de los jugadores a partir de un archivo
+     * Este m√°todo se encarga de modificar la informaci√°n de los jugadores a partir de un archivo
      */
     public void modificarInformacionJugadores( )
     {
         JFileChooser fc = new JFileChooser( "./data" );
-        fc.setDialogTitle( "Modificar informaciÛn de jugadores" );
+        fc.setDialogTitle("Modificar informaci√°n de jugadores" );
         int resultado = fc.showOpenDialog( this );
         if( resultado == JFileChooser.APPROVE_OPTION )
         {
@@ -289,20 +276,20 @@ public class InterfazMundial extends JFrame
             {
                 try
                 {
-                    mundial.modificarInformacionJugadores( archivo );
-                    JOptionPane.showMessageDialog( this, "La informaciÛn de los jugadores fue modificada", "Modificar InformaciÛn Jugadores", JOptionPane.INFORMATION_MESSAGE );
+                    mundial.modificarInformacionJugadores(archivo);
+                    JOptionPane.showMessageDialog(this, "La informaci√°n de los jugadores fue modificada", "Modificar Informaci√°n Jugadores", JOptionPane.INFORMATION_MESSAGE );
                 }
                 catch( FileNotFoundException e )
                 {
-                    JOptionPane.showMessageDialog( this, "Se presentÛ un problema leyendo el archivo:\n" + e.getMessage( ), "Error", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog(this, "Se present√° un problema leyendo el archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE );
                 }
                 catch( IOException e )
                 {
-                    JOptionPane.showMessageDialog( this, "Se presentÛ un problema leyendo el archivo:\n" + e.getMessage( ), "Error", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog(this, "Se present√° un problema leyendo el archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE );
                 }
                 catch( ArchivoJugadoresException e )
                 {
-                    JOptionPane.showMessageDialog( this, "Se presentÛ un problema debido al formato del archivo:\n" + e.getMessage( ), "Error", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog(this, "Se present√° un problema debido al formato del archivo:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE );
                 }
             }
         }
@@ -311,8 +298,8 @@ public class InterfazMundial extends JFrame
     }
 
     /**
-     * Formatea un valor numÈrico para presentar en la interfaz <br>
-     * @param valor El valor numÈrico a ser formateado
+     * Formatea un valor num√°rico para presentar en la interfaz <br>
+     * @param valor El valor num√°rico a ser formateado
      * @return Cadena con el valor formateado con puntos y signos.
      */
     public String formatearValor( double valor )
@@ -324,7 +311,7 @@ public class InterfazMundial extends JFrame
     }
 
     /**
-     * Este mÈtodo se encarga de salvar la informaciÛn del mundial, justo antes de cerrar la aplicaciÛn
+     * Este m√°todo se encarga de salvar la informaci√°n del mundial, justo antes de cerrar la aplicaci√°n
      */
     public void dispose( )
     {
@@ -336,7 +323,7 @@ public class InterfazMundial extends JFrame
         catch( Exception e )
         {
             setVisible( true );
-            int respuesta = JOptionPane.showConfirmDialog( this, "Problemas salvando la informaciÛn del mundial:\n" + e.getMessage( ) + "\nøQuiere cerrar el programa sin salvar?", "Error", JOptionPane.YES_NO_OPTION );
+            int respuesta = JOptionPane.showConfirmDialog(this, "Problemas salvando la informaci√°n del mundial:\n" + e.getMessage() + "\n√°Quiere cerrar el programa sin salvar?", "Error", JOptionPane.YES_NO_OPTION );
             if( respuesta == JOptionPane.YES_OPTION )
             {
                 super.dispose( );
@@ -345,11 +332,11 @@ public class InterfazMundial extends JFrame
     }
 
     // -----------------------------------------------------------------
-    // Puntos de ExtensiÛn
+    // Puntos de Extensi√°n
     // -----------------------------------------------------------------
 
     /**
-     * MÈtodo para la extensiÛn 1
+     * M√°todo para la extensi√°n 1
      */
     public void reqFuncOpcion1( )
     {
@@ -358,7 +345,7 @@ public class InterfazMundial extends JFrame
     }
 
     /**
-     * MÈtodo para la extensiÛn 2
+     * M√°todo para la extensi√°n 2
      */
     public void reqFuncOpcion2( )
     {
@@ -371,8 +358,8 @@ public class InterfazMundial extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Este mÈtodo ejecuta la aplicaciÛn, creando una nueva interfaz
-     * @param args Argumentos para la ejecuciÛn de la aplicaciÛn. No deben usarse
+     * Este m√°todo ejecuta la aplicaci√°n, creando una nueva interfaz
+     * @param args Argumentos para la ejecuci√°n de la aplicaci√°n. No deben usarse
      */
     public static void main( String[] args )
     {

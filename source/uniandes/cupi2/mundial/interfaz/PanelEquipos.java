@@ -1,17 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: PanelEquipos.java,v 1.7 2006/12/01 23:11:10 da-romer Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.Dimension;
@@ -72,12 +58,12 @@ public class PanelEquipos extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Ventana principal de la aplicación
+     * Ventana principal de la aplicaciÃ¡n
      */
     private InterfazMundial principal;
 
     /**
-     * Referencia al equipo que se está mostrando actualmente
+     * Referencia al equipo que se estÃ¡ mostrando actualmente
      */
     private Equipo equipoActual;
 
@@ -96,7 +82,7 @@ public class PanelEquipos extends JPanel implements ActionListener
     private JLabel etiquetaBandera;
 
     /**
-     * Etiqueta director técnico
+     * Etiqueta director tÃ¡cnico
      */
     private JLabel etiquetaDirector;
 
@@ -113,8 +99,9 @@ public class PanelEquipos extends JPanel implements ActionListener
 
     /**
      * Constructor del panel con los equipos del mundial
+     *
      * @param ventana Ventana principal - ventana!=null
-     * @param equipos Una lista con los nombres de los países de los equipos del mundial - equipos!=null
+     * @param equipos Una lista con los nombres de los paÃ¡ses de los equipos del mundial - equipos!=null
      */
 
     public PanelEquipos( InterfazMundial ventana, ArrayList equipos )
@@ -141,8 +128,8 @@ public class PanelEquipos extends JPanel implements ActionListener
         gbc.gridx = 1;
         panelAuxiliar.add( comboEquipos, gbc );
 
-        etiquetaDirector = new JLabel( "Director Técnico" );
-        panelAuxiliar.add( etiquetaDirector, gbc );
+        etiquetaDirector = new JLabel("Director TÃ¡cnico");
+        panelAuxiliar.add(etiquetaDirector, gbc );
         gbc.gridx = 0;
         gbc.gridy = 1;
         panelAuxiliar.add( etiquetaDirector, gbc );
@@ -169,11 +156,11 @@ public class PanelEquipos extends JPanel implements ActionListener
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // MÃ¡todos
     // -----------------------------------------------------------------
 
     /**
-     * Actualiza la información en el panel con la lista de equipos
+     * Actualiza la informaciÃ¡n en el panel con la lista de equipos
      * @param equipos Lista de equipos del mundial - equipos!=null
      */
     public void cargarEquipos( ArrayList equipos )
@@ -213,7 +200,7 @@ public class PanelEquipos extends JPanel implements ActionListener
     }
 
     /**
-     * Actualiza la información en el panel con la lista de equipos
+     * Actualiza la informaciÃ¡n en el panel con la lista de equipos
      * @param equipos la lista de equipos a desplegar - equipos!=null
      */
     public void refrescarEquipos( ArrayList equipos )
@@ -227,8 +214,8 @@ public class PanelEquipos extends JPanel implements ActionListener
     }
 
     /**
-     * Este es el método que se ejecuta cuando se cambia el equipo seleccionado en el combobox
-     * @param evento El evento de la selección de un equipo diferente - evento!=null
+     * Este es el mÃ¡todo que se ejecuta cuando se cambia el equipo seleccionado en el combobox
+     * @param evento El evento de la selecciÃ¡n de un equipo diferente - evento!=null
      */
     public void actionPerformed( ActionEvent evento )
     {

@@ -1409,7 +1409,7 @@
 			    max_width  	1008
 			    label      	
 |ArchivoJugadoresException
-|Esta excepción sirve para indicar que hubo un problema procesando el archivo con la información de los jugadores a modificar
+|Esta excepciÃ¡n sirve para indicar que hubo un problema procesando el archivo con la informaciÃ¡n de los jugadores a modificar
 			    )
 			fill_color 	13434879
 			width      	1068
@@ -1489,8 +1489,8 @@
 			    max_width  	965
 			    label      	
 |ElementoExisteException
-|Esta excepción se lanza cuando se intenta agregar al mundial un elemento repetido.
-| El mensaje asociado con la excepción debe indicar el equipo o el jugador que causó el error.
+|Esta excepciÃ¡n se lanza cuando se intenta agregar al mundial un elemento repetido.
+| El mensaje asociado con la excepciÃ¡n debe indicar el equipo o el jugador que causÃ¡ el error.
 			    )
 			fill_color 	13434879
 			width      	1025
@@ -1520,7 +1520,7 @@
 | pais != null
 | director != null
 | imagen != null
-| No hay dos o más jugadores con el mismo nombre
+| No hay dos o mÃ¡s jugadores con el mismo nombre
 			    )
 			fill_color 	13434879
 			width      	1125
@@ -1576,10 +1576,10 @@
 			    max_width  	1620
 			    label      	
 |Mundial
-|Es la clase para representar el mundial de fútbol
+|Es la clase para representar el mundial de fÃ¡tbol
 | inv:
 | equipos != null
-| No hay dos equipos del mismo país
+| No hay dos equipos del mismo paÃ¡s
 			    )
 			fill_color 	13434879
 			width      	1640
@@ -1603,8 +1603,8 @@
 			    max_width  	1072
 			    label      	
 |PersistenciaException
-|Esta excepción se lanza cuando se presenta un error al leer o escribir el archivo con la información del estado del modelo del mundo.
-| El mensaje asociado con la excepción debe describir el problema que se presentó.
+|Esta excepciÃ¡n se lanza cuando se presenta un error al leer o escribir el archivo con la informaciÃ¡n del estado del modelo del mundo.
+| El mensaje asociado con la excepciÃ¡n debe describir el problema que se presentÃ¡.
 			    )
 			fill_color 	13434879
 			width      	1132
@@ -2190,7 +2190,7 @@
 			    max_width  	771
 			    label      	
 |DialogoCrearEquipo
-|Es el diálogo para crear un nuevo equipo
+|Es el diÃ¡logo para crear un nuevo equipo
 			    )
 			fill_color 	14540253
 			width      	831
@@ -2214,7 +2214,7 @@
 			    max_width  	834
 			    label      	
 |DialogoCrearJugador
-|Es el diálogo para crear un nuevo jugador
+|Es el diÃ¡logo para crear un nuevo jugador
 			    )
 			fill_color 	14540253
 			width      	894
@@ -2238,7 +2238,7 @@
 			    max_width  	822
 			    label      	
 |InterfazMundial
-|Esta es la ventana principal de la aplicación.
+|Esta es la ventana principal de la aplicaciÃ¡n.
 			    )
 			fill_color 	14540253
 			width      	882
@@ -2262,7 +2262,7 @@
 			    max_width  	902
 			    label      	
 |PanelBotones
-|Es el panel donde se encuentran los botones principales de la aplicación
+|Es el panel donde se encuentran los botones principales de la aplicaciÃ¡n
 			    )
 			fill_color 	14540253
 			width      	962
@@ -3070,7 +3070,7 @@
 			    max_width  	859
 			    label      	
 |Mundial
-|Es la clase para representar el mundial de fútbol
+|Es la clase para representar el mundial de fÃ¡tbol
 			    )
 			fill_color 	13434879
 			width      	919
@@ -4202,7 +4202,7 @@
 			    max_width  	859
 			    label      	
 |Mundial
-|Es la clase para representar el mundial de fútbol
+|Es la clase para representar el mundial de fÃ¡tbol
 			    )
 			fill_color 	13434879
 			width      	919

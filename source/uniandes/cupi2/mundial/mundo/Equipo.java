@@ -1,17 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: Equipo.java,v 1.7 2006/12/01 22:29:13 da-romer Exp $
- * Universidad de los Andes (Bogot· - Colombia)
- * Departamento de IngenierÌa de Sistemas y ComputaciÛn 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-
 package uniandes.cupi2.mundial.mundo;
 
 import java.io.Serializable;
@@ -24,7 +10,7 @@ import java.util.ArrayList;
  * pais != null <br>
  * director != null <br>
  * imagen != null <br>
- * No hay dos o m·s jugadores con el mismo nombre <br>
+ * No hay dos o m√°s jugadores con el mismo nombre <br>
  */
 
 public class Equipo implements Serializable
@@ -34,7 +20,7 @@ public class Equipo implements Serializable
     // -----------------------------------------------------------------
 
     /**
-     * Indicador de versiÛn para la serializaciÛn
+     * Indicador de versi√°n para la serializaci√°n
      */
     private static final long serialVersionUID = 200L;
 
@@ -48,12 +34,12 @@ public class Equipo implements Serializable
     private ArrayList jugadores;
 
     /**
-     * Es el nombre del paÌs que representa el equipo
+     * Es el nombre del pa√°s que representa el equipo
      */
     private String pais;
 
     /**
-     * Es el nombre del director tÈcnico del equipo
+     * Es el nombre del director t√°cnico del equipo
      */
     private String director;
 
@@ -68,9 +54,10 @@ public class Equipo implements Serializable
 
     /**
      * Construye un nuevo Equipo con los datos suministrados y sin jugadores
-     * @param paisE Es el paÌs del equipo - paisE != null
-     * @param directorE Es el nombre del director tÈcnico del equipo - directorE != null
-     * @param imagenE Es la bandera del equipo - imagenE != null
+     *
+     * @param paisE     Es el pa√°s del equipo - paisE != null
+     * @param directorE Es el nombre del director t√°cnico del equipo - directorE != null
+     * @param imagenE   Es la bandera del equipo - imagenE != null
      */
     public Equipo( String paisE, String directorE, String imagenE )
     {
@@ -83,13 +70,13 @@ public class Equipo implements Serializable
     }
 
     // -----------------------------------------------------------------
-    // MÈtodos
+    // M√°todos
     // -----------------------------------------------------------------
 
     /**
      * Retorna un jugador del equipo dado su nombre.
      * @param nombreJ Es el nombre del jugador a buscar - nombreJ != null
-     * @return El jugador cuyo nombre es igual al nombre dado. Si no se encontrÛ retorna null.
+     * @return El jugador cuyo nombre es igual al nombre dado. Si no se encontr√° retorna null.
      */
     public Jugador darJugador( String nombreJ )
     {
@@ -112,7 +99,7 @@ public class Equipo implements Serializable
      * Adiciona un jugador al equipo. <br>
      * <b>post: </b> El jugador j ha sido agregado al equipo
      * @param j El nuevo jugador para adicionar al equipo - j!=null
-     * @throws ElementoExisteException Si ya existÌa un jugador con el mismo nombre
+     * @throws ElementoExisteException Si ya exist√°a un jugador con el mismo nombre
      */
     public void agregarJugador( Jugador j ) throws ElementoExisteException
     {
@@ -125,8 +112,8 @@ public class Equipo implements Serializable
     }
 
     /**
-     * Retorna el paÌs del equipo
-     * @return Se retornÛ el paÌs al que pertenece el equipo
+     * Retorna el pa√°s del equipo
+     * @return Se retorn√° el pa√°s al que pertenece el equipo
      */
     public String darPais( )
     {
@@ -134,8 +121,8 @@ public class Equipo implements Serializable
     }
 
     /**
-     * Retorna el nombre del director tÈcnico del equipo
-     * @return Se retornÛ el director del equipo
+     * Retorna el nombre del director t√°cnico del equipo
+     * @return Se retorn√° el director del equipo
      */
     public String darDirector( )
     {
@@ -144,7 +131,7 @@ public class Equipo implements Serializable
 
     /**
      * Retorna la ruta de la imagen con la bandera del equipo
-     * @return Se retornÛ la ruta de la imagen
+     * @return Se retorn√° la ruta de la imagen
      */
     public String darImagen( )
     {
@@ -153,7 +140,7 @@ public class Equipo implements Serializable
 
     /**
      * Retorna el vector con los nombres de las jugadores del equipo
-     * @return Se retornÛ el vector con los nombres de los jugadores
+     * @return Se retorn√° el vector con los nombres de los jugadores
      */
     public ArrayList darNombresJugadores( )
     {
@@ -167,8 +154,8 @@ public class Equipo implements Serializable
     }
 
     /**
-     * Calcula el valor de la nÛmina del equipo
-     * @return Se retornÛ el valor de la nÛmina del equipo
+     * Calcula el valor de la n√°mina del equipo
+     * @return Se retorn√° el valor de la n√°mina del equipo
      */
     public double calcularValorNomina( )
     {
@@ -182,11 +169,11 @@ public class Equipo implements Serializable
     }
 
     /**
-     * ModificaciÛn la informaciÛn del jugador con el nombre dado. <br>
+     * Modificaci√°n la informaci√°n del jugador con el nombre dado. <br>
      * <b>pre: </n> nombre pertenece a unos de los jugadores del equipo. <br>
-     * @param nombre El nombre del jugador al que se le va a modificar la informaciÛn - nombre!=null
+     * @param nombre El nombre del jugador al que se le va a modificar la informaci√°n - nombre!=null
      * @param edad La nueva edad del jugador - edad>0
-     * @param posicion La nueva posiciÛn del jugador - posiciom!=null
+     * @param posicion La nueva posici√°n del jugador - posiciom!=null
      * @param altura La nueva altura del jugador - altura>0
      * @param peso El nuevo peso del jugador - peso>0
      * @param salario El nuevo salario del jugador - salario>0
@@ -213,19 +200,19 @@ public class Equipo implements Serializable
      * pais != null <br>
      * director != null <br>
      * imagen != null <br>
-     * No hay dos o m·s jugadores con el mismo nombre <br>
+     * No hay dos o m√°s jugadores con el mismo nombre <br>
      */
-    private void verificarInvariante( )
+    private void verificarInvariante()
     {
         assert jugadores != null : "La lista de jugadores no debe ser nula";
-        assert pais != null : "El paÌs del equipo es inv·lido";
-        assert director != null : "El director tÈcnico es inv·lido";
-        assert imagen != null : "La ruta de la imagen es inv·lida";
-        assert !buscarJugadoresConElMismoNombre( ) : "Hay dos jugadores con el mismo nombre";
+        assert pais != null : "El pa√°s del equipo es inv√°lido";
+        assert director != null : "El director t√°cnico es inv√°lido";
+        assert imagen != null : "La ruta de la imagen es inv√°lida";
+        assert !buscarJugadoresConElMismoNombre() : "Hay dos jugadores con el mismo nombre";
     }
 
     /**
-     * Este mÈtodo sirve para revisar si hay jugadores repetidos dentro del equipo.
+     * Este m√°todo sirve para revisar si hay jugadores repetidos dentro del equipo.
      * @return Retorna true si hay un jugador que aparece repetido dentro de la lista de jugadores. Retorna false en caso contrario.
      */
     private boolean buscarJugadoresConElMismoNombre( )

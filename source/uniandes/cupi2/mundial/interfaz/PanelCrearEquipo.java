@@ -1,17 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: PanelCrearEquipo.java,v 1.7 2007/04/12 13:38:06 carl-veg Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.Dimension;
@@ -40,17 +26,17 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * El comando para el botón Crear
+     * El comando para el botÃ¡n Crear
      */
     private static final String CREAR_EQUIPO = "CrearEquipo";
 
     /**
-     * El comando para el botón Cancelar
+     * El comando para el botÃ¡n Cancelar
      */
     private static final String CANCELAR = "Cancelar";
 
     /**
-     * El comando para el botón Explorar
+     * El comando para el botÃ¡n Explorar
      */
     private static final String EXPLORAR = "Explorar";
 
@@ -59,7 +45,7 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Es una referencia al diálogo al que pertenece este panel
+     * Es una referencia al diÃ¡logo al que pertenece este panel
      */
     private DialogoCrearEquipo dialogo;
 
@@ -68,12 +54,12 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * Es la etiqueta "País: "
+     * Es la etiqueta "PaÃ¡s: "
      */
     private JLabel etiquetaPais;
 
     /**
-     * Es el campo de texto para ingresar el país del equipo
+     * Es el campo de texto para ingresar el paÃ¡s del equipo
      */
     private JTextField txtPais;
 
@@ -83,7 +69,7 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     private JLabel etiquetaDirector;
 
     /**
-     * Es el campo de texto para ingresar el director técnico del equipo
+     * Es el campo de texto para ingresar el director tÃ¡cnico del equipo
      */
     private JTextField txtDirector;
 
@@ -98,17 +84,17 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     private JTextField txtImagen;
 
     /**
-     * Es el botón usado para buscar la imagen
+     * Es el botÃ¡n usado para buscar la imagen
      */
     private JButton botonExplorar;
 
     /**
-     * Es el botón que sirve para agregar un nuevo equipo
+     * Es el botÃ¡n que sirve para agregar un nuevo equipo
      */
     private JButton botonAgregarEquipo;
 
     /**
-     * Es el botón que sirve para cerrar el diálogo sin guardar los cambios
+     * Es el botÃ¡n que sirve para cerrar el diÃ¡logo sin guardar los cambios
      */
     private JButton botonCancelar;
 
@@ -125,7 +111,7 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
         dialogo = d;
         setLayout( new GridBagLayout( ) );
 
-        etiquetaPais = new JLabel( "País: " );
+        etiquetaPais = new JLabel("PaÃ¡s: ");
         GridBagConstraints gbc = new GridBagConstraints( );
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -139,7 +125,7 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
 
         add( txtPais, gbc );
 
-        etiquetaDirector = new JLabel( "Director Técnico: " );
+        etiquetaDirector = new JLabel("Director TÃ¡cnico: ");
         gbc.gridx = 0;
         gbc.gridy = 1;
         add( etiquetaDirector, gbc );
@@ -193,12 +179,13 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // MÃ¡todos
     // -----------------------------------------------------------------
 
     /**
-     * Da el valor del campo de texto con el país del equipo
-     * @return Se retornó el nombre del país ingresado por el usuario
+     * Da el valor del campo de texto con el paÃ¡s del equipo
+     *
+     * @return Se retornÃ¡ el nombre del paÃ¡s ingresado por el usuario
      */
     public String darPais( )
     {
@@ -206,8 +193,8 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     }
 
     /**
-     * Da el valor del campo de texto con el director técnico del equipo
-     * @return Se retornó el nombre del director ingresado por el usuario
+     * Da el valor del campo de texto con el director tÃ¡cnico del equipo
+     * @return Se retornÃ¡ el nombre del director ingresado por el usuario
      */
     public String darDirector( )
     {
@@ -216,7 +203,7 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
 
     /**
      * Da el valor del campo de texto con la ruta de la imagen de la bandera del equipo
-     * @return Se retornó la ruta de la imagen ingresada por el usuario
+     * @return Se retornÃ¡ la ruta de la imagen ingresada por el usuario
      */
     public String darImagen( )
     {
@@ -224,8 +211,8 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
     }
 
     /**
-     * Ejecuta una acción cuando se hace click sobre un botón
-     * @param evento el evento del click sobre un botón - evento!=null
+     * Ejecuta una acciÃ¡n cuando se hace click sobre un botÃ¡n
+     * @param evento el evento del click sobre un botÃ¡n - evento!=null
      */
     public void actionPerformed( ActionEvent evento )
     {

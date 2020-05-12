@@ -1,17 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: PanelCrearJugador.java,v 1.9 2007/04/12 13:38:06 carl-veg Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.Dimension;
@@ -41,17 +27,17 @@ public class PanelCrearJugador extends JPanel implements ActionListener
     // -----------------------------------------------------------------
 
     /**
-     * El comando para el botón Explorar
+     * El comando para el botÃ¡n Explorar
      */
     private static final String EXPLORAR = "Explorar";
 
     /**
-     * El comando para el botón Crear
+     * El comando para el botÃ¡n Crear
      */
     private static final String CREAR_JUGADOR = "CrearJugador";
 
     /**
-     * El comando para el botón Cancelar
+     * El comando para el botÃ¡n Cancelar
      */
     private static final String CANCELAR = "Cancelar";
 
@@ -99,12 +85,12 @@ public class PanelCrearJugador extends JPanel implements ActionListener
     private JTextField txtEdad;
 
     /**
-     * Es la etiqueta "Posición: "
+     * Es la etiqueta "PosiciÃ¡n: "
      */
     private JLabel etiquetaPosicion;
 
     /**
-     * Es el campo de texto para ingresar la posición en la que juega el jugador
+     * Es el campo de texto para ingresar la posiciÃ¡n en la que juega el jugador
      */
     private JTextField txtPosicion;
 
@@ -139,17 +125,17 @@ public class PanelCrearJugador extends JPanel implements ActionListener
     private JTextField txtSalario;
 
     /**
-     * Es el botón usado para buscar la imagen
+     * Es el botÃ¡n usado para buscar la imagen
      */
     private JButton botonExplorar;
 
     /**
-     * Es el botón que sirve para agregar un nuevo jugador
+     * Es el botÃ¡n que sirve para agregar un nuevo jugador
      */
     private JButton botonAgregarJugador;
 
     /**
-     * Es el botón que sirve para cerrar el diálogo sin guardar los cambios
+     * Es el botÃ¡n que sirve para cerrar el diÃ¡logo sin guardar los cambios
      */
     private JButton botonCancelar;
 
@@ -190,7 +176,7 @@ public class PanelCrearJugador extends JPanel implements ActionListener
         gbc.gridx = 1;
         add( txtEdad, gbc );
 
-        etiquetaPosicion = new JLabel( "Posición:" );
+        etiquetaPosicion = new JLabel("PosiciÃ¡n:");
         gbc.gridx = 0;
         gbc.gridy = 2;
         add( etiquetaPosicion, gbc );
@@ -273,12 +259,13 @@ public class PanelCrearJugador extends JPanel implements ActionListener
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // MÃ¡todos
     // -----------------------------------------------------------------
 
     /**
      * Da el valor del campo de texto con el nombre del jugador
-     * @return Se retornó el nombre del jugador ingresado por el usuario
+     *
+     * @return Se retornÃ¡ el nombre del jugador ingresado por el usuario
      */
     public String darNombre( )
     {
@@ -287,7 +274,7 @@ public class PanelCrearJugador extends JPanel implements ActionListener
 
     /**
      * Da el valor del campo de texto con la edad del jugador
-     * @return Se retornó la edad del jugador ingresada por el usuario
+     * @return Se retornÃ¡ la edad del jugador ingresada por el usuario
      */
     public String darEdad( )
     {
@@ -295,8 +282,8 @@ public class PanelCrearJugador extends JPanel implements ActionListener
     }
 
     /**
-     * Da el valor del campo de texto con la posición del jugador
-     * @return Se retornó la posición del jugador ingresado por el usuario
+     * Da el valor del campo de texto con la posiciÃ¡n del jugador
+     * @return Se retornÃ¡ la posiciÃ¡n del jugador ingresado por el usuario
      */
     public String darPosicion( )
     {
@@ -305,7 +292,7 @@ public class PanelCrearJugador extends JPanel implements ActionListener
 
     /**
      * Da el valor del campo de texto con la altura del jugador
-     * @return Se retornó la altura del jugador ingresado por el usuario
+     * @return Se retornÃ¡ la altura del jugador ingresado por el usuario
      */
     public String darAltura( )
     {
@@ -314,7 +301,7 @@ public class PanelCrearJugador extends JPanel implements ActionListener
 
     /**
      * Da el valor del campo de texto con el peso del jugador
-     * @return Se retornó el peso del jugador ingresado por el usuario
+     * @return Se retornÃ¡ el peso del jugador ingresado por el usuario
      */
     public String darPeso( )
     {
@@ -323,7 +310,7 @@ public class PanelCrearJugador extends JPanel implements ActionListener
 
     /**
      * Da el valor del campo de texto con el salario del jugador
-     * @return Se retornó el salario del jugador ingresado por el usuario
+     * @return Se retornÃ¡ el salario del jugador ingresado por el usuario
      */
     public String darSalario( )
     {
@@ -332,7 +319,7 @@ public class PanelCrearJugador extends JPanel implements ActionListener
 
     /**
      * Da el valor del campo de texto con la ruta de la imagen con la foto del jugador
-     * @return Se retornó el nombre de la imagen ingresada por el usuario
+     * @return Se retornÃ¡ el nombre de la imagen ingresada por el usuario
      */
     public String darImagen( )
     {
@@ -340,8 +327,8 @@ public class PanelCrearJugador extends JPanel implements ActionListener
     }
 
     /**
-     * Ejecuta una acción cuando se hace click sobre un botón
-     * @param evento el evento del click sobre un botón - evento!=null
+     * Ejecuta una acciÃ¡n cuando se hace click sobre un botÃ¡n
+     * @param evento el evento del click sobre un botÃ¡n - evento!=null
      */
     public void actionPerformed( ActionEvent evento )
     {

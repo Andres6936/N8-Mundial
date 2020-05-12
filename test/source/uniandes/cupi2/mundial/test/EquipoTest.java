@@ -1,10 +1,10 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * $Id: EquipoTest.java,v 1.7 2007/04/12 13:38:06 carl-veg Exp $
- * Universidad de los Andes (Bogot· - Colombia)
- * Departamento de IngenierÌa de Sistemas y ComputaciÛn 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
+ * Universidad de los Andes (Bogot√° - Colombia)
+ * Departamento de Ingenier√°a de Sistemas y Computaci√°n
+ * Licenciado bajo el esquema Academic Free License version 2.1
+ * <p>
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
  * Ejercicio: n8_mundial
  * Autor: Milena Vela - 28-ago-2006
@@ -35,7 +35,7 @@ public class EquipoTest extends TestCase
     private Equipo equipo;
 
     // -----------------------------------------------------------------------
-    // MÈtodos
+    // M√°todos
     // -----------------------------------------------------------------------
 
     /**
@@ -71,9 +71,9 @@ public class EquipoTest extends TestCase
 
     /**
      * Prueba que los jugadores se agreguen correctamente. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * <b> M√°todos a probar: </b> <br>
      * agregarJugador. <br>
-     * <b> Objetivo: </b> Probar que el mÈtodo agregarjugador() es capaz de agregar jugadores de forma correcta al mundial. <br>
+     * <b> Objetivo: </b> Probar que el m√°todo agregarjugador() es capaz de agregar jugadores de forma correcta al mundial. <br>
      * <b> Resultados esperados: </b> <br>
      * 1. Al agregar un jugador que no existe en un equipo, este debe ser adicionado al equipo.
      */
@@ -83,26 +83,25 @@ public class EquipoTest extends TestCase
 
         Jugador j1 = new Jugador( "nombre1", 20, "Arquero", 1.80, 80.0, 10000.0, "nombre1.jpg" );
         int numJugadores = equipo.darNombresJugadores( ).size( );
-        try
-        {
-            equipo.agregarJugador( j1 );
-            assertNotNull( "El jugador no se agregÛ correctamente", equipo.darJugador( j1.darNombre( ) ) );
-            assertEquals( "El jugador no se agregÛ correctamente", numJugadores + 1, equipo.darNombresJugadores( ).size( ) );
+        try {
+            equipo.agregarJugador(j1);
+            assertNotNull("El jugador no se agreg√° correctamente", equipo.darJugador(j1.darNombre()));
+            assertEquals("El jugador no se agreg√° correctamente", numJugadores + 1, equipo.darNombresJugadores().size());
         }
         catch( ElementoExisteException e )
         {
-            fail( "No se debiÛ arrojar excepciÛn" );
+            fail("No se debi√° arrojar excepci√°n");
         }
     }
 
     /**
      * Prueba que los jugadores se agreguen correctamente. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * <b> M√°todos a probar: </b> <br>
      * agregarJugador. <br>
-     * <b> Objetivo: </b> Probar que el mÈtodo agregarjugador() arroja excepciÛn cuando se trata de agregar un jugador con <br>
+     * <b> Objetivo: </b> Probar que el m√°todo agregarjugador() arroja excepci√°n cuando se trata de agregar un jugador con <br>
      * un nombre repetido. <br>
      * <b> Resultados esperados: </b> <br>
-     * 1. Al agregar un jugador que existe en un equipo se debe arrojar una excepciÛn indic·ndolo.
+     * 1. Al agregar un jugador que existe en un equipo se debe arrojar una excepci√°n indic√°ndolo.
      */
     public void testAgregarJugadorError( )
     {
@@ -117,24 +116,24 @@ public class EquipoTest extends TestCase
         }
         catch( ElementoExisteException e )
         {
-            fail( "No se debiÛ arrojar excepciÛn" );
+            fail("No se debi√° arrojar excepci√°n");
         }
         try
         {
-            equipo.agregarJugador( j2 );
-            fail( "Se debiÛ arrojar excepciÛn" );
+            equipo.agregarJugador(j2);
+            fail("Se debi√° arrojar excepci√°n");
         }
         catch( ElementoExisteException e )
         {
-            assertEquals( "El n˙mero de jugadores no debiÛ cambiar", numJugadores + 1, equipo.darNombresJugadores( ).size( ) );
+            assertEquals("El n√°mero de jugadores no debi√° cambiar", numJugadores + 1, equipo.darNombresJugadores().size());
         }
     }
 
     /**
-     * Verifica los mÈtodos que retornan datos del equipo. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * Verifica los m√°todos que retornan datos del equipo. <br>
+     * <b> M√°todos a probar: </b> <br>
      * darPais, darDirector, darImagen. <br>
-     * <b> Objetivo: </b> Probar que los mÈtodos que dan informaciÛn de un equipo retornan la informaciÛn correcta. <br>
+     * <b> Objetivo: </b> Probar que los m√°todos que dan informaci√°n de un equipo retornan la informaci√°n correcta. <br>
      * <b> Resultados esperados: </b> <br>
      * 1. Al consultar el nombre del equipo, debe corresponder al nombre definido en el escenario. <br>
      * 2. Al consultar el director del equipo, debe corresponder al director definido en el escenario. <br>
@@ -142,37 +141,37 @@ public class EquipoTest extends TestCase
      */
     public void testDatos( )
     {
-        setupEscenario1( );
+        setupEscenario1();
 
-        assertEquals( "El nombre del equipo est· mal", "Colombia", equipo.darPais( ) );
-        assertEquals( "El director del equipo est· mal", "Maturana", equipo.darDirector( ) );
-        assertEquals( "La imagen del equipo est· mal", "prueba.jpg", equipo.darImagen( ) );
+        assertEquals("El nombre del equipo est√° mal", "Colombia", equipo.darPais());
+        assertEquals("El director del equipo est√° mal", "Maturana", equipo.darDirector());
+        assertEquals("La imagen del equipo est√° mal", "prueba.jpg", equipo.darImagen());
 
     }
 
     /**
-     * Verifica el mÈtodo darJugador.<br>
-     * Se busca un jugador que estÈ dentro del equipo. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * Verifica el m√°todo darJugador.<br>
+     * Se busca un jugador que est√° dentro del equipo. <br>
+     * <b> M√°todos a probar: </b> <br>
      * darJugador. <br>
-     * <b> Objetivo: </b> Probar que el mÈtodo darJugador() retorne un jugador que existe en el equipo. <br>
+     * <b> Objetivo: </b> Probar que el m√°todo darJugador() retorne un jugador que existe en el equipo. <br>
      * <b> Resultados esperados: </b> <br>
-     * 1. Al pedir un jugador que existe en el equipo, Èste debe ser retornada.
+     * 1. Al pedir un jugador que existe en el equipo, √°ste debe ser retornada.
      */
     public void testDarJugadorOk( )
     {
         setupEscenario2( );
 
         Jugador j = equipo.darJugador( "J2" );
-        assertNotNull( "El jugador se deberÌa haber encontrado", j );
+        assertNotNull("El jugador se deber√°a haber encontrado", j);
     }
 
     /**
-     * Verifica el mÈtodo darJugador.<br>
-     * Se busca un jugador que no estÈ dentro del equipo, esperando que retorne null. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * Verifica el m√°todo darJugador.<br>
+     * Se busca un jugador que no est√° dentro del equipo, esperando que retorne null. <br>
+     * <b> M√°todos a probar: </b> <br>
      * darJugador. <br>
-     * <b> Objetivo: </b> Probar que el mÈtodo darJugador() no retorne un jugador que no existe en el equipo. <br>
+     * <b> Objetivo: </b> Probar que el m√°todo darJugador() no retorne un jugador que no existe en el equipo. <br>
      * <b> Resultados esperados: </b> <br>
      * 1. Al pedir un jugador que no existe en el equipo se debe obtener null.
      */
@@ -181,14 +180,14 @@ public class EquipoTest extends TestCase
         setupEscenario2( );
 
         Jugador j = equipo.darJugador( "J5" );
-        assertNull( "El jugador NO se deberÌa haber encontrado", j );
+        assertNull("El jugador NO se deber√°a haber encontrado", j);
     }
 
     /**
-     * Verifica el mÈtodo darNombresJugadores, que deberÌa retornar los nombres de los 3 jugadores que est·n en el equipo. Este mÈtodo se verifica usando el escenario 2. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * Verifica el m√°todo darNombresJugadores, que deber√°a retornar los nombres de los 3 jugadores que est√°n en el equipo. Este m√°todo se verifica usando el escenario 2. <br>
+     * <b> M√°todos a probar: </b> <br>
      * darNombresJugadores. <br>
-     * <b> Objetivo: </b> Probar que el mÈtodo darNombresJugadores() retornen los nombres de todos los jugadores que hay en el equipo. <br>
+     * <b> Objetivo: </b> Probar que el m√°todo darNombresJugadores() retornen los nombres de todos los jugadores que hay en el equipo. <br>
      * <b> Resultados esperados: </b> <br>
      * 1. Al pedir el arreglo con los nombres de los jugadores de un equipo, dicho arreglo debe contener todos los nombres de los jugadores existentes.
      */
@@ -197,7 +196,7 @@ public class EquipoTest extends TestCase
         setupEscenario2( );
 
         ArrayList nombres = equipo.darNombresJugadores( );
-        assertEquals( "El n˙mero de nombres es incorrecto", 3, nombres.size( ) );
+        assertEquals("El n√°mero de nombres es incorrecto", 3, nombres.size());
 
         String nombre1 = ( String )nombres.get( 0 );
         String nombre2 = ( String )nombres.get( 1 );
@@ -209,43 +208,43 @@ public class EquipoTest extends TestCase
     }
 
     /**
-     * Verifica el mÈtodo que calcula el valor de la nÛmina de un equipo. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * Verifica el m√°todo que calcula el valor de la n√°mina de un equipo. <br>
+     * <b> M√°todos a probar: </b> <br>
      * calcularValorNomina. <br>
-     * <b> Objetivo: </b> Probar que el mÈtodo calcularValorNomina() calcula correctamente el valor de la nÛmina del equipo de acuerdo al salario de los jugadores. <br>
+     * <b> Objetivo: </b> Probar que el m√°todo calcularValorNomina() calcula correctamente el valor de la n√°mina del equipo de acuerdo al salario de los jugadores. <br>
      * <b> Resultados esperados: </b> <br>
-     * 1. Al consultar el valor de la nÛmina de un equipo, este valor debe corresponder a la suma de de los salarios de todos sus jugadores.
+     * 1. Al consultar el valor de la n√°mina de un equipo, este valor debe corresponder a la suma de de los salarios de todos sus jugadores.
      */
     public void testCalcularValorNomina( )
     {
         setupEscenario2( );
 
-        assertEquals( "El c·lculo de la nÛmina del equipo est· mal", 30001.0, equipo.calcularValorNomina( ), 0 );
+        assertEquals("El c√°lculo de la n√°mina del equipo est√° mal", 30001.0, equipo.calcularValorNomina(), 0);
     }
 
     /**
-     * Verifica el mÈtodo que modifica la informaciÛn de un jugador. <br>
-     * <b> MÈtodos a probar: </b> <br>
+     * Verifica el m√°todo que modifica la informaci√°n de un jugador. <br>
+     * <b> M√°todos a probar: </b> <br>
      * modificarInformacionJugador. <br>
-     * <b> Objetivo: </b> Probar que el mÈtodo modificarInformacionJugador() modifica correctamente la informaciÛn de un jugador existente. <br>
+     * <b> Objetivo: </b> Probar que el m√°todo modificarInformacionJugador() modifica correctamente la informaci√°n de un jugador existente. <br>
      * <b> Resultados esperados: </b> <br>
-     * 1. Al modificar la informaciÛn de un jugador, al consultarla se deben obtener los nuevos valores.
+     * 1. Al modificar la informaci√°n de un jugador, al consultarla se deben obtener los nuevos valores.
      */
     public void testModificarInformacionJugador( )
     {
-        setupEscenario2( );
+        setupEscenario2();
 
-        equipo.modificarInformacionJugador( "J2", 34, "Delantero", 1.99, 38.7, 25000.0, "imagen" );
+        equipo.modificarInformacionJugador("J2", 34, "Delantero", 1.99, 38.7, 25000.0, "imagen");
 
-        Jugador jugador = equipo.darJugador( "j2" );
+        Jugador jugador = equipo.darJugador("j2");
 
-        assertEquals( "La informaciÛn del jugador no se modifico correctamente", "J2", jugador.darNombre( ) );
-        assertEquals( "La informaciÛn del jugador no se modifico correctamente", 34, jugador.darEdad( ) );
-        assertEquals( "La informaciÛn del jugador no se modifico correctamente", "Delantero", jugador.darPosicion( ) );
-        assertEquals( "La informaciÛn del jugador no se modifico correctamente", 1.99, jugador.darAltura( ), 0 );
-        assertEquals( "La informaciÛn del jugador no se modifico correctamente", 38.7, jugador.darPeso( ), 0 );
-        assertEquals( "La informaciÛn del jugador no se modifico correctamente", 25000.0, jugador.darSalario( ), 0 );
-        assertEquals( "La informaciÛn del jugador no se modifico correctamente", "imagen", jugador.darImagen( ) );
+        assertEquals("La informaci√°n del jugador no se modifico correctamente", "J2", jugador.darNombre());
+        assertEquals("La informaci√°n del jugador no se modifico correctamente", 34, jugador.darEdad());
+        assertEquals("La informaci√°n del jugador no se modifico correctamente", "Delantero", jugador.darPosicion());
+        assertEquals("La informaci√°n del jugador no se modifico correctamente", 1.99, jugador.darAltura(), 0);
+        assertEquals("La informaci√°n del jugador no se modifico correctamente", 38.7, jugador.darPeso(), 0);
+        assertEquals("La informaci√°n del jugador no se modifico correctamente", 25000.0, jugador.darSalario(), 0);
+        assertEquals("La informaci√°n del jugador no se modifico correctamente", "imagen", jugador.darImagen());
 
     }
 

@@ -1,16 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
- * $Id: PanelImagen.java,v 1.1 2006/11/27 00:13:09 da-romer Exp $ 
- * Universidad de los Andes (Bogotá - Colombia) 
- * Departamento de Ingeniería de Sistemas y Computación 
- * Todos los derechos reservados 2005 
- * 
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Daniel Romero - 17-Nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
- */
-
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.Color;

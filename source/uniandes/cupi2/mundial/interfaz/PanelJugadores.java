@@ -1,17 +1,3 @@
-/**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * $Id: PanelJugadores.java,v 1.7 2006/12/01 22:29:13 da-romer Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
- *
- * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
- * Ejercicio: n8_mundial
- * Autor: Milena Vela - 10-may-2006
- * Autor: Daniel Romero - 30-nov-2006
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
-
 package uniandes.cupi2.mundial.interfaz;
 
 import java.awt.Dimension;
@@ -92,12 +78,12 @@ public class PanelJugadores extends JPanel implements ActionListener
     private JLabel etiquetaValorEdad;
 
     /**
-     * Etiqueta "Posición: "
+     * Etiqueta "PosiciÃ¡n: "
      */
     private JLabel etiquetaPosicion;
 
     /**
-     * Es la etiqueta con la posición del jugador
+     * Es la etiqueta con la posiciÃ¡n del jugador
      */
     private JLabel etiquetaValorPosicion;
 
@@ -167,26 +153,26 @@ public class PanelJugadores extends JPanel implements ActionListener
         add( comboJugadores, c );
 
         // Edad
-        etiquetaEdad = new JLabel( "Edad: " );
-        etiquetaValorEdad = new JLabel( "" );
-        etiquetaValorEdad.setFont( etiquetaValorEdad.getFont( ).deriveFont( Font.PLAIN ) );
-        c = new GridBagConstraints( 1, 1, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 3, 5, 3, 5 ), 0, 0 );
-        add( etiquetaEdad, c );
-        c = new GridBagConstraints( 2, 1, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 3, 5, 3, 5 ), 0, 0 );
-        add( etiquetaValorEdad, c );
+        etiquetaEdad = new JLabel("Edad: ");
+        etiquetaValorEdad = new JLabel("");
+        etiquetaValorEdad.setFont(etiquetaValorEdad.getFont().deriveFont(Font.PLAIN));
+        c = new GridBagConstraints(1, 1, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(3, 5, 3, 5), 0, 0);
+        add(etiquetaEdad, c);
+        c = new GridBagConstraints(2, 1, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(3, 5, 3, 5), 0, 0);
+        add(etiquetaValorEdad, c);
 
-        // Posición
-        etiquetaPosicion = new JLabel( "Posición: " );
-        etiquetaValorPosicion = new JLabel( "" );
-        etiquetaValorPosicion.setFont( etiquetaValorPosicion.getFont( ).deriveFont( Font.PLAIN ) );
-        c = new GridBagConstraints( 1, 2, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 3, 5, 3, 5 ), 0, 0 );
-        add( etiquetaPosicion, c );
-        c = new GridBagConstraints( 2, 2, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 3, 5, 3, 5 ), 0, 0 );
-        add( etiquetaValorPosicion, c );
+        // PosiciÃ¡n
+        etiquetaPosicion = new JLabel("PosiciÃ¡n: ");
+        etiquetaValorPosicion = new JLabel("");
+        etiquetaValorPosicion.setFont(etiquetaValorPosicion.getFont().deriveFont(Font.PLAIN));
+        c = new GridBagConstraints(1, 2, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(3, 5, 3, 5), 0, 0);
+        add(etiquetaPosicion, c);
+        c = new GridBagConstraints(2, 2, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(3, 5, 3, 5), 0, 0);
+        add(etiquetaValorPosicion, c);
 
         // Altura
-        etiquetaAltura = new JLabel( "Altura: " );
-        etiquetaValorAltura = new JLabel( "" );
+        etiquetaAltura = new JLabel("Altura: ");
+        etiquetaValorAltura = new JLabel("");
         etiquetaValorAltura.setFont( etiquetaValorAltura.getFont( ).deriveFont( Font.PLAIN ) );
         c = new GridBagConstraints( 1, 3, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets( 3, 5, 3, 5 ), 0, 0 );
         add( etiquetaAltura, c );
@@ -216,7 +202,7 @@ public class PanelJugadores extends JPanel implements ActionListener
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // MÃ¡todos
     // -----------------------------------------------------------------
 
     /**
@@ -226,9 +212,9 @@ public class PanelJugadores extends JPanel implements ActionListener
     public void cambiarJugador( Jugador j )
     {
         jugador = j;
-        etiquetaImagen.setIcon( new ImageIcon( jugador.darImagen( ) ) );
-        etiquetaValorEdad.setText( Integer.toString( jugador.darEdad( ) ) + " años" );
-        etiquetaValorPosicion.setText( jugador.darPosicion( ) );
+        etiquetaImagen.setIcon(new ImageIcon(jugador.darImagen()));
+        etiquetaValorEdad.setText(Integer.toString(jugador.darEdad()) + " aÃ¡os");
+        etiquetaValorPosicion.setText(jugador.darPosicion());
         etiquetaValorAltura.setText( Double.toString( jugador.darAltura( ) ) + " mts" );
         etiquetaValorPeso.setText( Double.toString( jugador.darPeso( ) ) + " Kgs" );
         etiquetaValorSalario.setText( principal.formatearValor( jugador.darSalario( ) ) + " millones anuales" );
@@ -252,7 +238,8 @@ public class PanelJugadores extends JPanel implements ActionListener
     }
 
     /**
-     * Cambia el equipo para el cual se muestran los jugadores en el panel y actualiza la información mostrada
+     * Cambia el equipo para el cual se muestran los jugadores en el panel y actualiza la informaciÃ¡n mostrada
+     *
      * @param e Es el equipo del que se quieren mostrar los jugadores - e!=null
      */
     private void cambiarEquipo( Equipo e )
@@ -276,8 +263,8 @@ public class PanelJugadores extends JPanel implements ActionListener
     }
 
     /**
-     * Ejecuta las acciones asociadas a los eventos. Actualiza la información del jugador en el panel de acuerdo al jugador seleccionado en el comboBox
-     * @param evento Es el evento del click sobre un botón - evento!=null
+     * Ejecuta las acciones asociadas a los eventos. Actualiza la informaciÃ¡n del jugador en el panel de acuerdo al jugador seleccionado en el comboBox
+     * @param evento Es el evento del click sobre un botÃ¡n - evento!=null
      */
     public void actionPerformed( ActionEvent evento )
     {
