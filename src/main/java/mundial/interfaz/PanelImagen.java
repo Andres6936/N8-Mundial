@@ -2,6 +2,7 @@ package mundial.interfaz;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -38,7 +39,10 @@ public class PanelImagen extends JPanel
         setLayout( layout );
         //
         // Carga la imagen
-        ImageIcon icono = new ImageIcon( "data/titulo.png" );
+        URL resource = getClass().getClassLoader().getResource("data/titulo.png");
+        assert resource != null;
+
+        ImageIcon icono = new ImageIcon( resource );
 
         // La agrega a la etiqueta
         imagen = new JLabel( "" );
