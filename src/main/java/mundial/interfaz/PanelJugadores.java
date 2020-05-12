@@ -7,6 +7,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -251,14 +252,14 @@ public class PanelJugadores extends JPanel implements ActionListener
             String jugador = ( String )jugadores.get( i );
             comboJugadores.addItem( jugador );
         }
-        if( jugadores.size( ) == 0 )
-        {
-            etiquetaImagen.setIcon( new ImageIcon( "./data/sinFoto.img" ) );
-            etiquetaValorEdad.setText( "" );
-            etiquetaValorPosicion.setText( "" );
-            etiquetaValorAltura.setText( "" );
-            etiquetaValorPeso.setText( "" );
-            etiquetaValorSalario.setText( "" );
+        if( jugadores.size( ) == 0 ) {
+            URL resource = getClass().getClassLoader().getResource("data/sinFoto.img");
+            etiquetaImagen.setIcon(new ImageIcon(resource));
+            etiquetaValorEdad.setText("");
+            etiquetaValorPosicion.setText("");
+            etiquetaValorAltura.setText("");
+            etiquetaValorPeso.setText("");
+            etiquetaValorSalario.setText("");
         }
     }
 

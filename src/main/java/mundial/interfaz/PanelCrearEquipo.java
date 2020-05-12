@@ -220,7 +220,7 @@ public class PanelCrearEquipo extends JPanel implements ActionListener
 
         if( EXPLORAR.equals( comando ) )
         {
-            JFileChooser fc = new JFileChooser( "./data/imagenes" );
+            JFileChooser fc = new JFileChooser("data/imagenes");
             fc.setDialogTitle( "Imagen de la bandera del equipo" );
             int resultado = fc.showOpenDialog( this );
             if( resultado == JFileChooser.APPROVE_OPTION )

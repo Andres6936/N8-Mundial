@@ -336,7 +336,7 @@ public class PanelCrearJugador extends JPanel implements ActionListener
 
         if( EXPLORAR.equals( comando ) )
         {
-            JFileChooser fc = new JFileChooser( "./data/imagenes" );
+            JFileChooser fc = new JFileChooser("data/imagenes");
             fc.setDialogTitle( "Imagen del jugador" );
             int resultado = fc.showOpenDialog( this );
 
